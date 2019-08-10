@@ -1,0 +1,47 @@
+{
+  "name": "is-gibberish",
+  "version": "0.0.1",
+  "description": "Tells you if a string is nonsense",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest spec.js --config=jest.config.js",
+    "example": "node examples/find-bad-filenames.js"
+  },
+  "directories": {
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hilja/is-gibberish.git"
+  },
+  "keywords": [
+    "language",
+    "processing"
+  ],
+  "author": "Antti Hilja",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hilja/is-gibberish/issues"
+  },
+  "homepage": "https://github.com/hilja/is-gibberish#readme",
+  "dependencies": {
+    "average": "^0.1.0",
+    "languagedetect": "^1.2.0"
+  },
+  "devDependencies": {
+    "clean-slate-lint": "^1.0.9",
+    "jest": "^24.8.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "jest": true
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "./node_modules/.bin/clean-slate-lint",
+      "pre-rewrite": "./node_modules/.bin/clean-slate-lint"
+    }
+  }
+}
